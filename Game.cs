@@ -58,6 +58,11 @@ namespace Command_Line_Calculator
                     inProcess = true;
                     Power();
                 }
+                if (inProcess == false && Input == "Percent" || Input == "percent" || Input == "%")
+                {
+                    inProcess = true;
+                    Percent();
+                }
                 if (inProcess == false && Input == "Clear" || Input == "clear")
                     RememberedValue = float.NaN;
                 
@@ -268,6 +273,48 @@ namespace Command_Line_Calculator
             Console.ReadKey();
             Console.Clear();
             RememberedValue = MathF.Pow(Value1, Value2);
+            inProcess = false;
+            Value1 = float.NaN;
+            Value2 = float.NaN;
+            RunTime();
+        }
+
+        public void Percent()
+        {
+            Console.Clear();
+            Console.WriteLine($"{Value1}%{Value2}=");
+            for (int Index = 0; Index < 2; Index++)
+            {
+                Input = Console.ReadLine();
+                Console.Clear();
+                float number;
+                if (Single.TryParse(Input, out number))
+                {
+                    if (Index == 0)
+                        Value1 = number;
+                    if (Index == 1)
+                        Value2 = number;
+                }
+                else if (Input == ">")
+                {
+                    if (Index == 0)
+                        Value1 = RememberedValue;
+                    if (Index == 1)
+                        Value2 = RememberedValue;
+                }
+                else
+                {
+                    Console.WriteLine("N/A");
+                    Index--;
+                }
+                Console.WriteLine($"{Value1}%{Value2}=");
+            }
+            Console.Clear();
+            float cal = (Value1 / 100) * Value2;
+            Console.WriteLine($"{Value1}%{Value2}={cal}");
+            Console.ReadKey();
+            Console.Clear();
+            RememberedValue = (Value1 / 100) * Value2;
             inProcess = false;
             Value1 = float.NaN;
             Value2 = float.NaN;
