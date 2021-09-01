@@ -94,7 +94,6 @@ namespace Command_Line_Calculator
                 }
                 else
                 {
-                    Console.WriteLine("N/A");
                     Index--;
                 }
                 Console.WriteLine($"{Value1}+{Value2}=");
@@ -136,7 +135,6 @@ namespace Command_Line_Calculator
                 }
                 else
                 {
-                    Console.WriteLine("N/A");
                     Index--;
                 }
                 Console.WriteLine($"{Value1}-{Value2}=");
@@ -178,7 +176,6 @@ namespace Command_Line_Calculator
                 }
                 else
                 {
-                    Console.WriteLine("N/A");
                     Index--;
                 }
                 Console.WriteLine($"{Value1}*{Value2}=");
@@ -220,7 +217,6 @@ namespace Command_Line_Calculator
                 }
                 else
                 {
-                    Console.WriteLine("N/A");
                     Index--;
                 }
                 Console.WriteLine($"{Value1}/{Value2}=");
@@ -262,7 +258,6 @@ namespace Command_Line_Calculator
                 }
                 else
                 {
-                    Console.WriteLine("N/A");
                     Index--;
                 }
                 Console.WriteLine($"{Value1}^{Value2}=");
@@ -304,7 +299,6 @@ namespace Command_Line_Calculator
                 }
                 else
                 {
-                    Console.WriteLine("N/A");
                     Index--;
                 }
                 Console.WriteLine($"{Value1}%{Value2}=");
