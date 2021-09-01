@@ -30,7 +30,7 @@ namespace Command_Line_Calculator
             while (Input != "Quit") 
             {
                 Console.Clear();
-                Console.WriteLine("Welcome to the calculator. Please start by entering an argument to begin calculating such as: 'Add' , 'Subtract' , 'Multiply' , 'Divide'");
+                Console.WriteLine("Welcome to the calculator. Enter your argument, or type 'Quit' to quit.");
                 Console.WriteLine($"Last sum: {RememberedValue}, You can input '>' to use this in equations rather than inputting a number");
                 Input = Console.ReadLine();
                 if (inProcess == false && Input == "Add" || Input == "add" || Input == "Addition" || Input == "addition" || Input == "+")
